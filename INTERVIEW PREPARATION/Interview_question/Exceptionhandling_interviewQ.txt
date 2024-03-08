@@ -1,0 +1,91 @@
+
+Exception:
+
+
+
+1.	What are different scenarios causing “Exception in thread main”?
+
+ans: 	Some of the common main thread exception scenarios are:
+	Exception in thread main java. lang. UnsupportedClassVersionError: 
+	This exception comes when your java class is compiled from another JDK 
+	version and you are trying to run it from another java version.
+
+
+
+2	What is OutOfMemoryError in Java?
+
+ans:		OutOfMemoryError exception. Usually, this error is thrown when there is insufficient 
+		space to allocate an object in the Java heap. In this case, The garbage collector cannot 
+		make space available to accommodate a new object, and the heap cannot be expanded further. 
+		Also, this error may be thrown when there is insufficient native memory to support the loading 
+		of a Java class.
+
+
+
+3. What is the difference between ClassNotFoundException and NoClassDefFoundError?
+	
+ans:		Both these exceptions occur when ClassLoader or JVM is not able to find classes while loading during run-time.
+		
+		 However, the difference between these 2 are: 
+
+		ClassNotFoundException: This exception occurs when we try to load a class that is not found in the classpath at runtime 
+		by making use of the loadClass() or Class.forName() methods.
+		NoClassDefFoundError: This exception occurs when a class was present at compile-time but was not found at runtime
+
+
+
+4. What do you understand by an unreachable catch block error?
+	
+ans:		This error is thrown by the compiler when we have multiple catch blocks and keep parent classes 
+		first and subclasses later. The catch blocks should follow the order of the most specific ones at
+		 the top to the most general ones at the bottom. If this is not followed, an unreachable catch block
+		 error is thrown during compile time.
+
+
+
+4. Is it possible to throw checked exceptions from a static block?
+
+ans : 		We cannot throw a check exception from a static block. However, we can have try-catch logic that handles 
+		the exception within the scope of that static block without rethrowing the exception using the throw keyword.
+		The exceptions cannot be propagated from static blocks because static blocks are invoked at the compiled time 
+		only once and no method invokes these blocks.
+
+
+
+6. What are different scenarios where “Exception in thread main” types of error could occur?
+	The following are some of the scenarios causing an exception in the main thread:
+
+		1. Exception in thread main java.lang.UnsupportedClassVersionError: 
+			This occurs when the Java class is compiled from one JDK version and we run the class in another JDK version.
+		
+		2. Exception in thread main java.lang.NoSuchMethodError: main: This occurs when we try to run a class that has no main method.
+		
+		3. Exception in thread main java.lang.NoClassDefFoundError: This occurs if a ClassLoader is unable to find that class in the 
+		   classpath at the time of loading it.
+		
+		4. Exception in thread “main” java.lang.ArithmeticException: 
+		   This is an example exception. Here, in the logic, ArithmeticException was thrown from the main method due to 
+		 some erroneous logic in the main or due to the methods called from the main that threw this exception but was not handled there.
+	  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

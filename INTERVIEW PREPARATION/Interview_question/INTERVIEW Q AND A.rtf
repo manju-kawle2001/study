@@ -1,0 +1,270 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 1.   is main method is mandatory for compile or for execution ?\par
+Ans :    You can compile a Java program without a main method, but you cannot execute it. If \tab your Java program doesn't contain the main method, then you will get an error.\par
+2.    when java file name and class name should be same ?\par
+ans :   In Java, the file name and class name should be the same when the class is public. This is \tab because the compiler needs to know which class is the main class to run the program. \tab If the file name and class name are not the same, the compiler will not be able to find \tab the main class and the program will not run.\par
+3.  in single java file how many class can be created ?\par
+ans : \tab There can be any number of classes in a single Java file, but only one of them can be \tab public. The public class is the one that is executed when the program is run. The other \tab classes can be private or protected, and they can only be accessed by methods in the \tab public class.\par
+4.  can we compile multiple class at a time ?\par
+ans :  \tab  Yes, you can compile multiple Java classes at a time using the javac command. When \tab you have multiple Java source files that are part of the same program and have \tab dependencies on each other, you can compile them together.\par
+\tab Ex :-  javac MainClass.java HelperClass.java\par
+5.  can we executed multiple class at a time ?\par
+ans :   YES, we can execute multiple class using TestNG ,\par
+\tab TestNG is a testing framework for Java that allows you to run tests in a structured and \tab flexible way, often used for unit testing, integration testing, and functional testing in \tab Java applications. When you want to execute multiple classes at once using TestNG, \tab you typically create a test suite XML file that specifies which classes should be included \tab in the test run.\par
+\tab // TestClass1.java\par
+\tab import org.testng.annotations.Test;\par
+\tab public class TestClass1 \{\par
+\tab     public void testMethod1() \{   //code \}\par
+\tab\tab\}\par
+\tab public class TestClass2 \par
+\tab\{\par
+\par
+// TestClass2.java\par
+    \tab     public void testMethod2() \par
+\tab\tab\{\par
+       \tab\tab  // Your test code here\par
+   \tab\tab  \}\par
+\tab\}\tab  \par
+<!-- testng.xml -->\par
+<!DOCTYPE suite SYSTEM "{{\field{\*\fldinst{HYPERLINK http://testng.org/testng-1.0.dtd }}{\fldrslt{http://testng.org/testng-1.0.dtd\ul0\cf0}}}}\f0\fs22 ">\par
+<suite name="MyTestSuite">\par
+    <test name="MyTest">\par
+        <classes>\par
+            <class name="path.to.TestClass1"/>\par
+            <class name="path.to.TestClass2"/>\par
+            <!-- Add more classes if needed -->\par
+        </classes>\par
+    </test>\par
+</suite>\par
+\par
+6.  will jvm executes user defined methods automatically\par
+ans :  \tab  No, the JVM does not execute user-defined methods automatically. The JVM only \tab executes the main() method. If you want to execute a user-defined method, you must \tab call it from the main() method.\par
+\par
+7.\tab what are the two keyword  we have to provide  memory to class member ?\par
+ans :   \tab In Java, there are two keywords used to allocate memory to class members\par
+\tab  (fields or variables): new and static\par
+\tab new Keyword:\par
+\tab The new keyword is used to dynamically allocate memory for an object. It is commonly \tab used when creating instances of a class (objects) at runtime.\par
+\tab When you create an object using new, memory is allocated on the heap, and the \tab constructor of the class is invoked to initialize the object.\par
+\par
+\tab static Keyword:\par
+\tab The static keyword is used to create class-level variables and methods. Memory for \tab static members is allocated once per class, rather than per instance of the class.\par
+\tab static members belong to the class itself, not to any specific instance of the class.\par
+\par
+8.\tab what is the difference between static and new keyword ?\par
+ans : \tab In Java, the new keyword creates a new object. The static keyword is used to \tab\tab\tab perform operations that are not dependent on instance creation. \par
+\tab Here's some more information about the static and new keywords: \par
+\tab Static:\par
+\tab Static members are initialized when the class is loaded into memory.\par
+\tab Static methods can be used to create utility or helper classes.\par
+\tab Static methods do not require an instance to be invoked upon.\par
+\tab new:\par
+\tab Allocates memory for the object.\par
+\tab Used to create new objects.\par
+\par
+9.  \tab  if class does not have main method how can we execute the class methods ?\par
+ans : \tab\par
+\tab have some douvt \par
+\tab\{  \par
+\tab Yes, we can execute a java program without a main method by using a static block. \tab Static block in Java is a group of statements that gets executed only once when the \tab class is loaded into the memory by Java ClassLoader, It is also known as a static i\tab nitialization block. \line\tab\}\par
+10.\tab can we call main method explicitly , what is the syntax ?\par
+ans :   \tab Yes, you can call the main method explicitly in Java. The syntax is\par
+\tab class MyClass \{\par
+    \tab public static void main(String[] args) \{\par
+        \tab\tab System.out.println("Hello, World!");\par
+    \tab\tab\}    \par
+\tab\tab public static void callMain() \{\par
+       \tab\tab  main(null);\par
+    \tab\tab\tab\}\par
+\tab\}\par
+\par
+11.\tab what will happen if we call main method in its own body ?\par
+ans : \tab If you call the main method in its own body, it will create an infinite loop. The reason \tab for this is that the main method is the entry point for the program, and when it is \tab called, it will start executing the code in its body. This code will then call the main \tab method again, which will then start executing the code in its body again, and so on. \tab This will continue until the program runs out of memory or is manually terminated.\par
+\par
+12.\tab cannwe overload the main() method ?\par
+ans :\tab Yes, we can overload the main() method in Java. A Java class can have any number of \tab overloaded main() methods. But it should have one main() method with signature as \tab\ldblquote public static void main(String[] args)\rdblquote  to run. If not class will compile but not run. \par
+\par
+13.\tab what is meaning of auto compilation ? in java\par
+ans : \tab Auto compilation in Java is a feature that allows the Java compiler to automatically c\tab ompile Java source code when it is changed. This can be a useful feature for \tab developers who are working on large projects, as it can save them time from having to \tab manually compile their code each time they make a change.\par
+\tab There are a few different ways to enable auto compilation in Java. One way is to use \tab the javac compiler with the -auto option. Another way is to use the Eclipse IDE, which \tab has a built-in compiler that supports auto compilation.\par
+\par
+14.\tab what is the deffrent between System.out.println and system.out.println and \tab system.out.prntf();  ?\par
+ans : \tab in Java, System.out.println() prints a line of text. System.out.printf() formats a line of \tab text. \par
+\tab Here's some more information about these functions: \par
+\tab System.out.println()\par
+\tab Creates a new line after printing the string. It can be used for simple text or text \tab\tab containing concatenation. For example, println("a: " + a + " b: " + b).\par
+\tab System.out.printf()\par
+\tab Does not create a new line after printing. It can be used to format strings. For example, \tab `printf("a: %d b: %d", a, b)`.\par
+\par
+15.\tab what is the java source file structure ?\par
+ans :     \tab A Java source file has the following structure:\par
+\tab Package statement: The package statement is used to declare the package to which the \tab class belongs.\par
+\tab Import statements: The import statements are used to import classes from other \tab packages.\par
+\tab Class definition: The class definition is the main part of the Java source file. It contains \tab the declaration of the class, its members, and its methods.\par
+\par
+16.\tab can we place package statement anywhere in the java file ?\par
+ans :   \tab No, the package statement in Java must be the very first statement in a Java file. It is \tab used to organize classes into logical groups. The package statement is followed by \tab import statements, which are used to import classes from other packages. After the \tab import statements, the rest of the Java file can be defined.\par
+\par
+17\tab what is the use of main method parameter in java ?\par
+ans :\tab The main() method can also accept parameters from the command line. These \tab parameters are passed to the main() method as an array of strings. The name of the \tab array is args. You can use the args array to get information from the user, such as the \tab name of a file to read or the port number to listen on.\par
+\par
+18\tab which part of main method can be changable ?\par
+ans :\tab Name of the String array argument: For example, you can change args to myStringArgs\par
+\tab Position of the static and public keywords: You can interchange these keywordsOrder \tab of the main method: You can change the order of public static void main() to \tab static \tab public void main().\par
+\par
+19\tab hat is the syntax to call main method explicitly ?\par
+ans :\tab public class MainMethodExample \{\par
+    public static void main(String[] args) \{\par
+        System.out.println("Inside the main method");\par
+    \}\par
+    public static void anotherMethod() \{\par
+        System.out.println("Inside another method");\par
+        // Calling the main method explicitly\par
+        main(new String[]\{"arg1", "arg2"\});\par
+    \}\par
+    public static void main(String arg) \{\par
+        System.out.println("Inside the overloaded main method");\par
+    \}\par
+\}\par
+\par
+20.\tab why main method is called mediator method between programmer and jvm ?\par
+ans :\tab The main method is called the mediator method between the programmer and the \tab JVM because it is the entry point for the program. This means that the JVM will start \tab executing the program at the main method. The main method is also responsible for \tab initializing the program and calling the other methods in the program.\par
+\par
+21.\tab what is coding standards and naming conventions in java ?\par
+ans :\tab ava coding standards and naming conventions are a set of rules that define how Java \tab code should be written. These standards are important because they help to make \tab code more readable, consistent, and maintainable.\par
+22.\tab what is the token in java ?\par
+ans :\tab a token refers to the smallest individual units or elements in the source code of a \tab program. Java source code is made up of a series of tokens, and these tokens are the \tab building blocks that form the structure of the code. The Java compiler recognizes and \tab processes these tokens to understand the syntax and semantics of the program.\par
+\tab Common types of tokens in Java include:\par
+\tab Keywords: Reserved words that have a special meaning in Java (e.g., public, class, if, \tab else, etc.).\par
+\tab Identifiers: Names given to variables, methods, classes, etc. by the programmer. \tab Identifiers must follow certain naming conventions.\par
+\tab Literals: Represent constant values in the code, such as numeric literals (e.g., 5, 3.14), \tab string literals (e.g., "Hello, World!"), etc.\par
+\tab Operators: Symbols that perform operations on variables and values (e.g., +, -, *, /, \tab ==, !=, etc.).\par
+\tab Separators: Characters that separate various elements of the code, such as commas ,, \tab semicolons ;, parentheses (), etc.\par
+\tab Comments: Used for documentation and are ignored by the compiler. They can be \tab single-line (//) or multi-line (/* */).\par
+\par
+23.\tab can we use predefine class name as identifier ?\par
+ans :\tab Yes, you technically can use a predefined class name as an identifier in Java, but it is s\tab trongly discouraged. Using the names of predefined classes for your own identifiers \tab can lead to confusion and make your code less readable and maintainable. It is best \tab practice to choose meaningful, unique, and descriptive names for your variables, \tab methods, and classes.\tab\par
+\par
+24.\tab if we create a class with name String , how can we differentiate predefined class \tab String ?\par
+ans :\tab It is not recommended to create a class with the same name as a predefined class in \tab Java. This can lead to confusion for other developers who are working on your code, \tab as well as the compiler, which may not be able to differentiate between your class and \tab the predefined class.\par
+\tab If you need to create a class with the same name as a predefined class, you can use the \tab import statement to import the predefined class. This will ensure that the compiler can \tab differentiate between the two classes.\par
+\par
+25.\tab access modifier is signature or not in java?\par
+ans : \tab No, access modifier is not part of the method signature in Java.\par
+\tab The method signature is the combination of the method name and the parameter \tab types. The access modifier is a keyword that specifies the visibility of the method. It is \tab not part of the method name or the parameter types, so it is not part of the method \tab signature.\par
+\par
+26.\tab null is an keyword or not in java ?\par
+ans : \tab No, null is not a keyword in Java. It is a literal.\par
+\tab A keyword is a reserved word that has a special meaning to the compiler. Literals are \tab values that can be assigned to variables.\par
+\tab The null literal is used to represent the absence of a value. It can be assigned to any \tab reference variable, but it cannot be used as an operand in an expression.\par
+\par
+27.\tab annotation is an keyword or not in java ?\par
+ans : \tab No, annotation is not a keyword in Java. It is a non-access modifier that provides \tab additional information about a program element. Annotations are used to provide \tab metadata about classes, methods, fields, and other program elements. They can be \tab used for a variety of purposes, such as documentation, configuration, and \tab performance tuning.\par
+\tab Annotations are preceded by the @ symbol. For example, the following code shows an \tab annotation that is used to document a method:\par
+\par
+\tab -----------------------------DATA TYPE----------------------------\par
+\par
+28.\tab how many types of data types java supports ?\par
+ans :\tab byte: an 8-bit signed integer\par
+\tab short: a 16-bit signed integer\par
+\tab int: a 32-bit signed integer\par
+\tab long: a 64-bit signed integer\par
+\tab float: a 32-bit floating-point number\par
+\tab double: a 64-bit floating-point number\par
+\tab char: a single character\par
+\tab boolean: a true or false value\par
+\par
+29.\tab what is difference between primitive type and reference type in java ?\par
+ans :\tab The main difference between primitive and reference type in java is that primitive type \tab always has a value, it can never be null but reference type can be null, which denotes \tab the absence of value.\par
+\tab It's true that primitive types are immutable in the sense that their values cannot be \tab changed once they are assigned. If you assign a new value to a variable, it creates a \tab new memory location for that value.\par
+\tab int x = 10;\par
+\tab x = 20;  // x now refers to a new memory location with the value 20\par
+\par
+30.\tab how can we create CUI & GUI for reading runtime values ? \par
+ans :\tab There are two ways to create a CUI (Command-line User Interface) and GUI (Graphical \tab User Interface) for reading runtime values in Java:\par
+\tab 1. CUI:\par
+\tab To create a CUI, you can use the Scanner class to read input from the console. Once \tab you have the input, you can use the System.getProperty() method to read the runtime \tab value.\par
+\tab 2. GUI:\par
+\tab To create a GUI, you can use the Swing or JavaFX toolkit. Swing is a lightweight GUI \tab toolkit that is included with the Java SE platform. JavaFX is a newer GUI toolkit that is \tab built on top of JavaFX Scene Graph.\par
+\par
+31.\tab what is the meaning of command line arguments in java ?\par
+ans :\tab The command line argument in java is the information passed to the program at the \tab time of running the program. It is the argument passed through the console when the \tab program is run. The command line argument is the data that is written right after the \tab program's name at the command line while executing the program.\par
+\par
+32.\tab why main method has String [] parameter ?\par
+ans : \tab The main method in Java has a String array parameter to receive any command-line \tab arguments passed to the program when it is executed.\par
+\par
+33.\tab how can we read command line arguments in java?\par
+ans :\tab To read command-line arguments in Java, you can use the args parameter of \tab the \tab main() method. The args parameter is an array of String objects, which contains the \tab command-line arguments that were passed to the program.\par
+\tab For example, the following code prints all of the command-line arguments to the \par
+ex:-\par
+\tab public class Main \{\par
+  \tab   public static void main(String[] args) \{\par
+    \tab     for (String arg : args) \{\par
+       \tab      System.out.println(arg);\par
+     \tab    \}\par
+   \tab  \}\par
+\tab\}\par
+\par
+------------------------OPERATOR----------------------------\tab\par
+\par
+34.\tab WHAT IS Operator and operand ? \par
+ans : \tab An operator is a symbol that represents an operation. An operand is a data item that \tab the operator acts on. In Java, there are many different types of operators, including \tab arithmetic operators, relational operators, logical operators, and assignment \tab operators.\par
+\par
+35.\tab what is the meaning of operator precedence & operator associativity ? \par
+ans :\tab Operator precedence is a hierarchy of operators, with operators of higher precedence \tab being evaluated before operators of lower precedence. For example, in the expression \tab a + b * c, the multiplication operation (*) has higher precedence than the addition \tab operation (+), so the multiplication operation will be evaluated first.\par
+\par
+36.\tab what are the operator executed from Right to Left in java ?\par
+ans :\tab In Java, the assignment operator (=) is executed from right to left. This means that in \tab the expression a = b = c, the assignment is executed from right to left, and the \tab expression is equivalent to a = (b = c).\par
+\tab The *= operator is executed from right to left, so in the expression a *= b *= c, the \tab multiplication is executed from right to left, and the expression is equivalent to \par
+\tab a = (b \tab *= c) *= a.\par
+37.\tab when will we get ArithmeticException,infinity or NaN from div operator ? \par
+ans :\tab  you will get an ArithmeticException when you try to divide an integer by zero. This is \tab because there is no number that can be divided by zero to produce a finite result.\par
+\tab You will get Infinity when you divide a floating-point number by zero. This is because \tab Infinity is a special number that represents the concept of infinity.\par
+\tab You will get NaN (Not a Number) when you divide zero by zero. This is because there is \tab no defined mathematical operation that can be performed on zero divided by zero.\par
+38.\tab how can we compare two primitive value & two objects in java ?\par
+ans : \tab Using the == operator. This operator compares the values of two primitive data types \tab like int, long, short, byte, float, and double. For example, if you have two int variables, \tab a and b, and you want to compare their values, you can use the ==\par
+\tab To compare two objects in Java, you can use the equals() method. This method \tab compares the values of two objects. For example, if you have two String objects, s1 \tab and s2, and you want to compare their values, you can use the equals() method like \tab this:\par
+\par
+39.\tab can you identify when will you get below Is ?\par
+\tab a.\tab CE: bad operand types for the binary operators\par
+\tab b.\tab incomparable types ?\par
+ans:\tab\par
+a: \tab It occurs when the data types of the operands used in the binary operator are \tab incompatible.\par
+\tab public class BadOperatorError \{  \par
+    \tab public static void main(String args[]) \{  \par
+      \tab int a = 26;  \par
+      \tab if( a & 32 == 1)\{  \par
+        \tab   System.out.println("inside if block");  \par
+      \tab\}  \par
+      \tab else\{  \par
+        \tab   System.out.println("inside else block");  \par
+      \tab\}  \par
+   \tab  \}\tab   \par
+\tab\} \par
+//\tab badoperatorerror.java:4: error: bad operand types for binary operator\par
+\par
+b:\tab The error "incomparable types" in Java typically occurs when you are trying to \tab compare two values or expressions using the equality (== or !=) or relational (<, \tab <=, >, >=) operators, and the types of those values are not compatible for comparison.\par
+\tab int number = 5;\par
+\tab String text = "Hello";\par
+\tab if (number == text) \{\par
+  \tab   // Error: incomparable types: int and String\par
+\tab\}\par
+\par
+40.\tab what is deffrence between & , |  ?\par
+ans:\tab Bitwise AND (&):\par
+\tab Performs a bitwise AND operation between the corresponding bits of two integer \tab operands.\par
+\tab Bitwise OR (|):\par
+\tab Performs a bitwise OR operation between the corresponding bits of two integer \tab operands.\par
+\tab int a = 5;    // binary: 0101\par
+\tab int b = 3;    // binary: 0011\par
+\tab int resultAnd = a & b;  // Result: 0001 (1 in decimal)\par
+\tab int resultOr = a | b;   // Result: 0111 (7 in decimal)\par
+\par
+\par
+\par
+
+\pard\ri-1097\sa200\sl276\slmult1\par
+}
+ 

@@ -1,0 +1,143 @@
+1. What is JavaScript?
+
+JavaScript is the Programming Language for the Web. It can update and change both HTML and CSS, calculate, manipulate, and validate data.
+
+2. How does a Browser Execute JavaScript?
+
+Loading: When a browser encounters a JavaScript code block or file while rendering a web page, it initiates the process of loading that code.
+
+Compilation: The JavaScript engine compiles the code into executable code. This involves converting human-readable JavaScript code into low-level machine code that the computer's processor can understand and execute efficiently. Modern JavaScript engines often use techniques like just-in-time (JIT) compilation to optimize code execution.
+
+JavaScript Engine: A JavaScript engine executes JavaScript code. It converts human-readable JavaScript code into machine code that the computer can understand. JavaScript engines are used in web browsers, servers, and other applications. The most popular JavaScript engines are V8 (used in Google Chrome and Microsoft Edge), SpiderMonkey (used in Firefox), and JavaScriptCore (used in Safari). They are typically developed by web browser vendors, and every major browser has one.
+Execution in Call Stack: The call stack is a critical component of the JavaScript engine's runtime environment.
+Global Execution Context: The global execution context is the initial execution context that is created when a JavaScript program starts running. It represents the environment in which the top-level code of a script is executed.
+
+Memory Component: Refers to the memory allocation and management mechanisms used by the JavaScript engine to store and manipulate data during the execution of a program.
+Code Component: Refers to the actual JavaScript code written by developers to define the behavior, logic, and functionality of web applications or scripts.
+
+
+3. What are the Features of JavaScript?
+
+JavaScript features include:
+
+DOM manipulation
+Functions as objects
+Date and time handling
+Form validation
+No compiler needed
+Lightweight scripting language
+Dynamic typing
+Object-oriented programming support
+Functional style
+Platform independence
+Single-threaded
+Client-side validations
+
+
+4. What is DOM?
+
+The Document Object Model (DOM) is a programming interface that represents the structure of HTML and XML documents as a tree-like structure. It provides a way for programs and scripts to dynamically access, manipulate, and update the content, structure, and style of web pages.
+
+
+5. How to Perform Click Event on DOM Using JavaScript?
+
+To perform a click event on the DOM using JavaScript, you can use the following syntax: element.addEventListener(event, function). The first parameter is the type of the event (like "click" or "mousedown" or any other HTML DOM Event). The second parameter is the function we want to call when the event occurs.
+
+6. What is alert() and confirm()?
+
+Alert Box: Used to inform/alert the user about an event. Has only one button named ‘OK’ and no return value.
+Confirmation Box: Provides the user with a choice about an event. Has two buttons named ‘OK’ and ‘Cancel’ and returns ‘true’ and ‘false’ respectively.
+
+
+7. What is the Difference Between undefined and null?
+
+Undefined: Variable declared but not assigned a value.
+Null: Assignment value representing no value.
+
+
+8. What is the Difference Between == and ===?
+
+The main difference is that == does type conversion before comparison, while === compares both values and data types.
+
+
+9. What is a Function? Can We Overload Functions in JavaScript?
+
+A JavaScript function is a block of code designed to perform a particular task and executed when "something" invokes it. JavaScript does not support function overloading.
+
+
+
+10. What is a Callback? Explain with a Suitable Example.
+
+A callback is a function passed as an argument to another function and is called after the main function has finished its execution. It allows handling the results of an asynchronous operation in a non-blocking manner.
+
+
+
+11. What is a Promise? What are the Advantages of Promises over Callbacks?
+
+Promises manage asynchronous actions in JavaScript, ensuring that something will be done. They provide better readability and a more structured way of handling asynchronous operations compared to callbacks.
+
+
+
+12. What is Callback Hell?
+
+Callback hell refers to the situation where multiple nested callbacks make code difficult to read and maintain. 
+It arises when dealing with asynchronous operations that depend on each other.
+
+
+
+13 What is closure ?
+
+A closure is a function that has access to the variables and references from its outer (enclosing) function's scope, even after the outer function has finished executing.
+This means the inner function "remembers" the environment in which it was created, allowing it to access and manipulate variables from the outer scope.
+
+
+
+14 What is IIFEs(Immediately Invoked Function expression).
+
+An Immediately Invoked Function Expression (IIFE) is a way to execute a function right after it's created. It's defined and called at the same time. This helps create a private scope for variables and functions, preventing them from polluting the global scope. 
+
+(function() {
+    // Your code here
+})();
+
+
+
+
+15. What is annonymous function ?
+
+An anonymous function is a function that is defined without a name. It is typically assigned to a variable or passed as an argument to another function.
+
+
+
+16 What is hoisting in javascript ?
+
+ hoisting refers to the special treatment of variable and function declarations, where they are conceptually moved to the top of their scope before code execution begins. This means you can use a variable or function before it's declared in your code, and it will still work as expected. However, it's important to understand the nuances of hoisting to avoid unexpected behavior.
+
+Let and const block-level scoping: 
+The hoisting behavior only applies to the top-level scope of a function or the global scope. let and const variables declared within blocks (like if statements or loops) are not hoisted and cannot be accessed before their declaration.
+
+
+
+17  What is difference between var, let and const keyword ?
+
+Feature		var			let			const
+
+Scope		Function or Global	Block			Block
+Mutability	Re-assignable		Re-assignable		Immutable
+Hoisting	Yes			No			No
+
+
+
+18. Explain use strict.
+
+It is not a statement, but a literal expression, ignored by earlier versions of JavaScript.
+The purpose of "use strict" is to indicate that the code should be executed in "strict mode".
+With strict mode, you can not, for example, use undeclared variables.
+
+You can use strict mode in all your programs. It helps you to write cleaner code, like preventing you from using undeclared variables.
+"use strict" is just a string, so IE 9 will not throw an error
+
+
+ 
+19. What is event bubbling and event capturing ?
+

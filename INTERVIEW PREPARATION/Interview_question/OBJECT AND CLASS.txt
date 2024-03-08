@@ -1,0 +1,108 @@
+1. If a class is declared without any access modifiers, where may the class be accessed?
+
+A class that is declared without any access modifiers is said to have package or default access.
+ This means that the class can only be accessed by other classes and interfaces that are defined within 
+the same package.
+
+
+2 .  Does a class inherit the constructors of its superclass?
+
+A class does not inherit constructors from any of its super classes
+
+
+3. Which java.util classes and interfaces support event handling?
+
+The EventObject class and the EventListener interface support event processing
+
+4.    What is the purpose of the Runtime class?
+
+The purpose of the Runtime class is to provide access to the Java runtime system.
+It returns the runtime information like memory availability.
+
+* Runtime.freeMemory() –> Returns JVM Free Memory
+* Runtime.maxMemory() –> Returns the maximum amount of memory that the JVM will attempt to use.
+ It also helps to run the garbage collector
+* Runtime.gc()
+
+
+
+5.    Can an unreachable object become reachable again?
+
+An unreachable object may become reachable again. This can happen when the object’s finalize() method is
+ invoked and the object performs an operation which causes it to become accessible to reachable object
+
+
+6.    What is the functionality of instanceOf() ?
+instanceOf opertaor is used to check whether an object can be cast to a specific type without throwing
+ ClassCastException.
+
+
+7 . What would happen if you say this = null?
+
+It will come up with Error Message
+
+“The left-hand side of an assignment must be a variable”.
+
+
+8  . I want to create two instances of a class ,But when trying for creating third instance it should not allow me to create .
+ What i have to do for making this?
+
+
+9.   Why default constructor of base class will be called first in java?
+
+A subclass inherits all the methods and fields (eligible one) from the base class, so base class is constructed in the process
+ of creation of subclass object (subclass is also an object of superclass). Hence before initializing the default value of sub 
+class the super class should be initialized using the default constructor.
+
+
+10.  What are the other ways to create an object other than creating as new object?
+
+We can create object in different ways;
+
+1.new operator
+
+2.class.forName: Classname obj = Class.forName(“Fully Qualified class Name”).newInstance();
+
+3.newInstance
+
+4.object.clone
+
+
+
+11 .  What is the difference between instance, object, reference and a class?
+
+Class: A class is a user defined data type with set of data members & member functions
+
+Object: An Object is an instance of a class
+
+Reference: A reference is just like a pointer pointing to an object
+
+Instance: This represents the values of data members of a class at a particular time
+
+
+12.  Can we force JVM to run garbage collection?
+
+No. We cannot force instead we can request JVM to run a garbage collection
+
+
+13.  Explain which type of variables will go in heap and  which type in stack?
+
+All the instance variables (references) and any objects (local or instance) will reside under heap and local variables (references) will go in stack.
+
+
+14.	How we can request Garbage Collection request?
+
+There are two ways to request Garbage Collector-
+
+Runtime.getRuntime().gc()
+System.gc()
+
+
+
+
+
+
+
+
+
+
